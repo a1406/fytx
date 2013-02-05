@@ -1,0 +1,23 @@
+g++ -g -O0 -I../net_lib/Include -I../util_lib -I../../boost_1_47_0/ -I../game_def -I/usr/include/mongo -o game_server   *.cpp ../objs/*.o  -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lpthread  -ldl -lm  -lrt -Wl,-E  -lmongoclient
+
+
+g++   -I../inc/aposto-mongodb111 -I/usr/include/mongo -I../../boost_1_47_0/ -I../game_def -I../util_lib/ -I../net_lib/Include  -O0 -g  *.cpp ../objs/*.o -L../../boost_1_47_0/stage/lib -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lmongoclient -lpthread -o test
+
+
+
+===
+g++ -g -O0  -o game_server   *.o ../objs/*.o  -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time    -lmongoclient
+
+g++ -g -O0 -I../net_lib/Include -I../util_lib -I../../boost_1_47_0/ -I../game_def -I/usr/include/mongo -o game_server *.o  -L../bin  -lldperfect_util  -lldperfect_net  -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lpthread  -ldl -lm  -lrt -Wl,-E  -lmongoclient
+
+
+
+g++ -g -O0  -fPIC --shared -o libldperfect_net.so ../objs/*.o  -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time 
+g++  -fPIC --shared -o libldperfect_net.so src/core.o src/despatcher.o src/msg_server.o src/read_buffer.o src/tcp_session.o 
+
+g++ -g -O0  -o game_server   *.o -L../net_lib/ -lldperfect_net  -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time    -lmongoclient
+g++ -g -O0  -o gate_server *.o  -L../net_lib/  -lldperfect_net -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lpthread  -ldl -lm  -lrt -Wl,-E 
+
+
+
+g++ -g -O0  -o gate_server *.o -L../bin  -lldperfect_util  -lldperfect_net   -L../../boost_1_47_0/stage/lib  -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lpthread  -ldl -lm  -lrt -Wl,-E 

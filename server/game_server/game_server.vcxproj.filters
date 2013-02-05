@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="game_handler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="game_server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="db_manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="player_manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="equipment_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="war_story.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="army.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="battle_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="world_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="building_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="science.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="local_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chat_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="training.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="email_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="building_sub_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="daily_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="skill.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="office_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="season_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="legion_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cd_config.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cd_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="team_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="truck_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="record_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="war_story_ranking.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="online_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="card_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mission_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arena_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="active_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamic_config_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="seige_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="king_arena_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="trans_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="charge_gift_system.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="game_server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="db_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="equipment_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="war_story.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="army.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="battle_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="world_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="building_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="science.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="local_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chat_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="training.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="email_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="building_sub_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="daily_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="skill.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="office_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="season_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="legion_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cd_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cd_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="team_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="truck_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="record_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="war_story_ranking.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="online_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="card_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mission_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arena_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="active_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamic_config_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="seige_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="king_arena_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="trans_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="charge_gift_system.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

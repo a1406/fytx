@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{456981F6-1965-47DC-A3AD-3AFDDF8B5428}</ProjectGuid>
+    <RootNamespace>game_server</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../bin</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\util_lib;..\game_def;..\inc\aposto-mongodb;..\net_lib\include;..\inc\boost_1_47_0;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\inc\boost_1_47_0;.\Include;..\util_lib;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\net_lib\Include;..\game_def;..\inc\aposto-mongodb;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ProgramDataBaseFileName>..\bin\$(ProjectName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_WIN_LOG_;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>util_lib.lib;net_lib.lib;MongoDrv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\net_lib\bin;..\lib;..\lib\aposto-mongodb\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>..\lib;..\lib\aposto-mongodb\release;..\release\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>util_lib.lib;MongoDrv.lib;net_lib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="active_system.cpp" />
+    <ClCompile Include="arena_system.cpp" />
+    <ClCompile Include="army.cpp" />
+    <ClCompile Include="battle_system.cpp" />
+    <ClCompile Include="building_sub_system.cpp" />
+    <ClCompile Include="building_system.cpp" />
+    <ClCompile Include="card_system.cpp" />
+    <ClCompile Include="cd_config.cpp" />
+    <ClCompile Include="cd_system.cpp" />
+    <ClCompile Include="charge_gift_system.cpp" />
+    <ClCompile Include="chat_system.cpp" />
+    <ClCompile Include="daily_system.cpp" />
+    <ClCompile Include="db_manager.cpp" />
+    <ClCompile Include="dynamic_config_system.cpp" />
+    <ClCompile Include="email_system.cpp" />
+    <ClCompile Include="equipment_system.cpp" />
+    <ClCompile Include="game_handler.cpp" />
+    <ClCompile Include="game_server.cpp" />
+    <ClCompile Include="king_arena_system.cpp" />
+    <ClCompile Include="legion_system.cpp" />
+    <ClCompile Include="local_system.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mission_system.cpp" />
+    <ClCompile Include="office_system.cpp" />
+    <ClCompile Include="online_system.cpp" />
+    <ClCompile Include="player_manager.cpp" />
+    <ClCompile Include="record_system.cpp" />
+    <ClCompile Include="resource_system.cpp" />
+    <ClCompile Include="science.cpp" />
+    <ClCompile Include="season_system.cpp" />
+    <ClCompile Include="seige_system.cpp" />
+    <ClCompile Include="skill.cpp" />
+    <ClCompile Include="team_system.cpp" />
+    <ClCompile Include="training.cpp" />
+    <ClCompile Include="trans_system.cpp" />
+    <ClCompile Include="truck_system.cpp" />
+    <ClCompile Include="war_story.cpp" />
+    <ClCompile Include="war_story_ranking.cpp" />
+    <ClCompile Include="world_system.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="active_system.h" />
+    <ClInclude Include="arena_system.h" />
+    <ClInclude Include="army.h" />
+    <ClInclude Include="battle_system.h" />
+    <ClInclude Include="building_sub_system.h" />
+    <ClInclude Include="building_system.h" />
+    <ClInclude Include="card_system.h" />
+    <ClInclude Include="cd_config.h" />
+    <ClInclude Include="cd_system.h" />
+    <ClInclude Include="charge_gift_system.h" />
+    <ClInclude Include="chat_system.h" />
+    <ClInclude Include="daily_system.h" />
+    <ClInclude Include="db_manager.h" />
+    <ClInclude Include="dynamic_config_system.h" />
+    <ClInclude Include="email_system.h" />
+    <ClInclude Include="equipment_system.h" />
+    <ClInclude Include="game_handler.h" />
+    <ClInclude Include="game_server.h" />
+    <ClInclude Include="king_arena_system.h" />
+    <ClInclude Include="legion_system.h" />
+    <ClInclude Include="local_system.h" />
+    <ClInclude Include="mission_system.h" />
+    <ClInclude Include="office_system.h" />
+    <ClInclude Include="online_system.h" />
+    <ClInclude Include="player_manager.h" />
+    <ClInclude Include="record_system.h" />
+    <ClInclude Include="resource_system.h" />
+    <ClInclude Include="science.h" />
+    <ClInclude Include="season_system.h" />
+    <ClInclude Include="seige_system.h" />
+    <ClInclude Include="skill.h" />
+    <ClInclude Include="team_system.h" />
+    <ClInclude Include="training.h" />
+    <ClInclude Include="trans_system.h" />
+    <ClInclude Include="truck_system.h" />
+    <ClInclude Include="war_story.h" />
+    <ClInclude Include="war_story_ranking.h" />
+    <ClInclude Include="world_system.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
