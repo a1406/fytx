@@ -1,0 +1,4 @@
+14:29:13 [ERROR]	failed to parse file server_list.json * Line 7, Column 1
+  Missing '}' or object member name
+
+14:29:13 [INFO]	 {	"server1" : "127.0.0.1",	"server2" : "127.0.0.1",	"server3" : "127.0.0.1",	"server4" : "127.0.0.1",	"server5" : "127.0.0.1",}
