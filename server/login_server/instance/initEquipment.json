@@ -1,0 +1,24 @@
+{
+    "storage" : 5,
+    "magicValue" : 90,
+    "generateId" : 10,
+    "equipList" : 
+    [
+	{
+        	"id" : 1,
+        	"rawId" : 1,
+        	"level" : 1,
+        	"drawDeadline" : 0,
+        	"pieceNum" : 0,
+        	"generalName" : ""
+    	},
+    	{
+        	"id" : 6,
+       		"rawId" : 1001,
+        	"level" : 1,
+        	"drawDeadline" : 0,
+        	"pieceNum" : 0,
+        	"generalName" : ""
+    	}
+    ]
+}

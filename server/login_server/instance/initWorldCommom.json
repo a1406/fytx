@@ -1,0 +1,12 @@
+{
+    "kingdomRelation" : [false,false,false],
+    "population" : [0,0,0],
+    "visibleList" : [{
+        "rawId" : 1,
+        "prosperity" : 100,
+        "occupying" : -1,
+        "population" : [0,0,0],
+        "priceRate" : 100,
+        "priceRate" : true
+    }]
+}
