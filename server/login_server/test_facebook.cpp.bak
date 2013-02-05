@@ -1,0 +1,104 @@
+/***************************************************************************
+ *                                  _   _ ____  _
+ *  Project                     ___| | | |  _ \| |
+ *                             / __| | | | |_) | |
+ *                            | (__| |_| |  _ <| |___
+ *                             \___|\___/|_| \_\_____|
+ *
+ * Copyright (C) 1998 - 2012, Daniel Stenberg, <daniel@haxx.se>, et al.
+ *
+ * This software is licensed as described in the file COPYING, which
+ * you should have received as part of this distribution. The terms
+ * are also available at http://curl.haxx.se/docs/copyright.html.
+ *
+ * You may opt to use, copy, modify, merge, publish, distribute and/or sell
+ * copies of the Software, and permit persons to whom the Software is
+ * furnished to do so, under the terms of the COPYING file.
+ *
+ * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
+ * KIND, either express or implied.
+ *
+ ***************************************************************************/
+/* An example source code that issues a HTTP POST and we provide the actual
+ * data through a read callback.
+ */
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <curl/curl.h>
+#include "json/value.h"
+#include "json/reader.h"
+//using namespace na::net;
+
+static size_t write_callback( char *ptr, size_t size, size_t nmemb, void *userdata)
+{
+	printf("i am %lu\n size = %d nmemb = %d\n", (uint64_t)userdata, size, nmemb);
+	printf(ptr);
+
+	Json::Value msgValue, respVal;
+	
+	Json::Reader reader;
+	if(false == reader.parse(ptr, msgValue))
+	{
+//		std::cerr << __FUNCTION__ << LogEnd;
+		goto done;
+	}
+
+	if (!msgValue["error"].isNull())
+		goto done;
+
+	if (msgValue["id"].isNull() || !msgValue["id"].isString())
+		goto done;
+
+	printf("\nid = %s\n", msgValue["id"].asString().c_str());
+
+done:	
+	return size * nmemb;
+}
+
+static void	send_facebook_varify(const char *key)
+{
+    CURLcode curlCode;
+    CURLcode httpCode_;		
+	CURL *curl = curl_easy_init();
+//	static char *query_url = "https://graph.facebook.com/me";
+	static char *query_url = "https://graph.facebook.com/me?access_token=AAACEdEose0cBAFZBBmaYNlWSDUZCZAJ6UJf0NGkNtv3pbk7gILG87XrZBLiPx5a092sTdoZAmjF4HeEn2QVZAwm0ZAGrxPug1EFlv9XugLVEYBg4AjDVqY2";
+	char p[512];// = query_url + 43;
+	sprintf(p, "access_token=%s", key);
+//	strcpy(p, key);
+
+	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
+	curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0);
+
+//	curl_easy_setopt(curl,CURLOPT_SSL_VERIFYPEER,1); ;
+//	curl_easy_setopt(curl,CURLOPT_CAINFO, "/home/jacktang/test/cacert.pem");
+	
+	curl_easy_setopt(curl, CURLOPT_URL, query_url);
+//	curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "");
+	
+//	curl_easy_setopt(curl, CURLOPT_POST, 1L);
+//	curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
+
+	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);			
+	curl_easy_setopt(curl, CURLOPT_WRITEDATA, 1230);
+	curlCode = curl_easy_perform(curl);
+        
+	curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode_);
+	
+}
+
+void test_post()
+{
+	
+
+    CURLcode curlCode;
+    CURLcode httpCode_;
+
+	send_facebook_varify("AAACEdEose0cBAAuB6CJRS1xxZBZC0PdxE1Lhc8NjhuM4NeX333P6uTA65Ycsyy88dZAgSuXP0XJdrVieoIBZBHWiFMkTHALhg7iS3u7EKJkxj6SaeZAJE");
+}
+
+int main(void)
+{
+  test_post();
+  return 0;
+}

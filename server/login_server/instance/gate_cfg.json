@@ -1,0 +1,25 @@
+{
+	"account_server" : "10.1.1.105",
+	"account_server_port"   : "2108",
+	"fee_server" : "10.1.1.105",
+	"fee_server_port"   : "2208",
+	"game_server" : "127.0.0.1",
+	"game_server_port"   : "2009",
+	"gate_port"   : 2008,
+	"newbie_servers" : ["127.0.0.1","2019"],
+	"server_id": 15,
+	"gm_tools_ip" : "",
+	"is_tx":false,
+	"is_debug": true,
+	"statistic": true,
+	"buffer_size" : 50,
+	"package_size": 8192,
+	"fileLogLevel": 1,
+	"screenLogLevel": 1,
+	"serverName": "gate",
+	"logPathName": "./log/",	
+	"classLogLevelMap":
+	{
+		"na": 2
+	}
+}

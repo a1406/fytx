@@ -1,0 +1,18 @@
+{
+	"addressOfDB" : "127.0.0.1",
+	"logServer" : "127.0.0.1",
+	"logServerPort" : 2010,
+	"addressOfMysql" : "127.0.0.1",
+	"mysqlDbName" : "sanguo",
+	"mysqlUser" : "root",
+	"mysqlPw" : "mongo123123",
+	"is_using_log_db" : true,
+	"fileLogLevel": 1,
+	"screenLogLevel": 1,
+	"serverName": "gate",
+	"logPathName": "./log/",	
+	"classLogLevelMap":
+	{
+		"na": 2
+	}
+}

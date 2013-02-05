@@ -1,0 +1,12 @@
+{
+		"fileLogLevel": 1,
+		"screenLogLevel": 1,
+		"serverName": "server",
+		"logPathName": "./log/",	
+		"classLogLevelMap":
+			{
+				"na::log::Player::display": 1,
+				"na::log": 4,
+				"na": 3
+			}
+}
